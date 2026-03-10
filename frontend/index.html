@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>USA Unclaimed Money Finder - AI-Powered Search 69 Sources</title>
+    <meta name="description" content="Find your unclaimed money with AI. Search 69 government sources. 1 in 7 Americans have unclaimed property. Free AI voice search, document OCR, family scanning.">
+    <meta name="keywords" content="unclaimed money, missing money, AI search, voice search, unclaimed property, free money, USA">
+    <meta name="author" content="USA Unclaimed Money Finder">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="USA Unclaimed Money Finder - AI-Powered">
+    <meta property="og:description" content="Find your unclaimed money with AI. 69 sources, 98.5% accuracy.">
+    <meta property="og:image" content="https://usaunclaimed.com/og-image.jpg">
+    <meta property="og:url" content="https://usaunclaimed.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="USA Unclaimed Money Finder">
+    <meta name="twitter:description" content="AI-powered unclaimed money search">
+    <meta name="twitter:image" content="https://usaunclaimed.com/twitter-card.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/ultimate-style.css">
+    
+    <!-- PWA -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#0052cc">
+</head>
+<body>
+    <!-- Global Disclaimer -->
+    <div class="global-disclaimer">
+        ⚖️ This site uses public government data. Not legal advice. 1 in 7 Americans have unclaimed money. 
+        <a href="/disclaimer">Full Disclaimer</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="ultimate-nav" id="mainNav">
+        <div class="nav-container">
+            <div class="logo">
+                🇺🇸 USA <span>Unclaimed.AI</span>
+            </div>
+            
+            <div class="nav-links" id="navLinks">
+                <a href="/" class="active">Home</a>
+                <a href="/search">Search</a>
+                <a href="/premium">Premium</a>
+                <a href="/stories">Success Stories</a>
+                <a href="/resources">Resources</a>
+                <a href="/blog">Blog</a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="voice-nav" onclick="startVoiceNavigation()" aria-label="Voice navigation">
+                    🎤
+                </button>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    🌓
+                </button>
+                <div class="auth-buttons">
+                    <a href="/login" class="btn-outline">Login</a>
+                    <a href="/signup" class="btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu" onclick="toggleMobileMenu()">☰</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with AI Search -->
+    <section class="ai-hero">
+        <div class="container">
+            <h1 id="aiHeadline">Find Your Unclaimed Money with <span>AI Power</span></h1>
+            <p class="subtitle">Search 69 government sources • 98.5% accuracy • 1 in 7 Americans have money</p>
+            
+            <div class="ai-search-container">
+                <div class="ai-search-box">
+                    <input type="text" id="searchInput" placeholder="Enter name or upload document..." class="search-input">
+                    <button class="ai-mic" onclick="startVoiceSearch()" id="voiceBtn" aria-label="Voice search">
+                        🎤
+                    </button>
+                    <button class="ai-search-btn" onclick="performSearch()">
+                        🔍 AI Search
+                    </button>
+                </div>
+                
+                <div class="ai-options">
+                    <button class="ai-option" onclick="openUpload()">
+                        📄 Upload Document (OCR)
+                    </button>
+                    <button class="ai-option" onclick="scanFamily()">
+                        👨‍👩‍👧‍👦 Scan Family Tree
+                    </button>
+                    <input type="file" id="fileUpload" accept=".pdf,.jpg,.jpeg,.png" style="display: none;">
+                </div>
+                
+                <div class="ai-suggestions" id="aiSuggestions"></div>
+            </div>
+            
+            <div class="stats-banner">
+                <div class="stat-item">
+                    <span class="stat-value">69</span>
+                    <span class="stat-label">Data Sources</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">642M+</span>
+                    <span class="stat-label">Records</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">$70B+</span>
+                    <span class="stat-label">Unclaimed</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">98.5%</span>
+                    <span class="stat-label">Accuracy</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Features Showcase -->
+    <section class="ai-features">
+        <div class="container">
+            <h2>🤖 10 AI Features You Won't Find Elsewhere</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔤</div>
+                    <h3>AI Name Match</h3>
+                    <p>Finds John even if spelled Jon, Johnson, etc. 99% accuracy</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎤</div>
+                    <h3>Voice Search</h3>
+                    <p>Search by speaking with USA accent recognition</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👨‍👩‍👧</div>
+                    <h3>Family Scanner</h3>
+                    <p>Scan entire family names at once - 5x more matches</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💰</div>
+                    <h3>Amount Predictor</h3>
+                    <p>AI predicts how much money you might find</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📄</div>
+                    <h3>Document OCR</h3>
+                    <p>Upload PDF/image, AI reads names automatically</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💬</div>
+                    <h3>AI Chatbot</h3>
+                    <p>24/7 instant answers to your questions</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Fraud Detector</h3>
+                    <p>AI flags suspicious claims, keeps you safe</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Tax Calculator</h3>
+                    <p>Know exactly how much tax you'll pay</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Success Predictor</h3>
+                    <p>See your chance of getting the money</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌎</div>
+                    <h3>Auto-Translate</h3>
+                    <p>10+ languages supported</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Plans -->
+    <section class="premium-plans" id="premiumPlans">
+        <div class="container">
+            <h2>Choose Your Premium Plan</h2>
+            <p class="section-subtitle">3-day free trial • No credit card required</p>
+            
+            <div class="plans-grid" id="plansGrid">
+                <!-- Plans loaded dynamically from Google Sheets -->
+            </div>
+            
+            <div class="payment-methods">
+                <h3>Accepted Payment Methods</h3>
+                <div class="payment-icons">
+                    <span class="payment-icon visa">VISA</span>
+                    <span class="payment-icon mastercard">MC</span>
+                    <span class="payment-icon amex">AMEX</span>
+                    <span class="payment-icon discover">DISCOVER</span>
+                    <span class="payment-icon paypal">PayPal</span>
+                    <span class="payment-icon applepay">Apple Pay</span>
+                    <span class="payment-icon googlepay">Google Pay</span>
+                    <span class="payment-icon venmo">Venmo</span>
+                    <span class="payment-icon ach">ACH</span>
+                </div>
+                <p class="secure-note">🔒 Secure payments • All auto-transfer to one PayPal account</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="success-stories">
+        <div class="container">
+            <h2>Real People, Real Money Found</h2>
+            <div class="stories-grid" id="storiesGrid">
+                <!-- Stories loaded dynamically -->
+            </div>
+            <div class="share-buttons">
+                <button onclick="share('facebook')">📘 Facebook</button>
+                <button onclick="share('twitter')">🐦 Twitter</button>
+                <button onclick="share('linkedin')">💼 LinkedIn</button>
+                <button onclick="share('whatsapp')">📱 WhatsApp</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div class="ai-chatbot" id="aiChatbot">
+        <div class="chatbot-header" onclick="toggleChatbot()">
+            <span>🤖 AI Assistant</span>
+            <span class="chat-toggle">▼</span>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot">
+                    👋 Hi! I'm your AI assistant. Ask me anything about unclaimed money!
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Type your question..." onkeypress="if(event.key==='Enter') sendChatMessage()">
+                <button onclick="sendChatMessage()">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="ultimate-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About</h4>
+                    <p>USA Unclaimed Finder uses AI to help Americans find their unclaimed money from 69 government sources. 1 in 7 have money waiting.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">📘</a>
+                        <a href="#" aria-label="Twitter">🐦</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                        <a href="#" aria-label="LinkedIn">💼</a>
+                        <a href="#" aria-label="YouTube">▶️</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <a href="/">Home</a>
+                    <a href="/search">Search</a>
+                    <a href="/premium">Premium</a>
+                    <a href="/stories">Success Stories</a>
+                    <a href="/resources">Resources</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Resources</h4>
+                    <a href="/resources/states">State Guides</a>
+                    <a href="/resources/faq">FAQ</a>
+                    <a href="/resources/blog">Blog</a>
+                    <a href="/resources/how-to-claim">How to Claim</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="/terms">Terms of Service</a>
+                    <a href="/privacy">Privacy Policy</a>
+                    <a href="/cookies">Cookie Policy</a>
+                    <a href="/disclaimer">Disclaimer</a>
+                    <a href="/dmca">DMCA</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 USA Unclaimed Money Finder. All rights reserved. 50-state coverage.</p>
+                <div class="footer-disclaimer">
+                    This site is not affiliated with any government agency. Information based on public records.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="/js/ultimate-app.js"></script>
+</body>
+</html>
