@@ -1,0 +1,67 @@
+name: ULTIMATE PROCESS - All 50 Features
+
+on:
+  schedule:
+    - cron: '0 3 * * *'   # Daily 3 AM - Main download
+    - cron: '*/15 * * * *' # Every 15 min - Resume failed
+    - cron: '0 2 * * 0'    # Sunday 2 AM - Weekly cleanup
+    - cron: '0 4 1 * *'    # 1st of month - Monthly archive
+    - cron: '0 5 1 1 *'    # Jan 1 - Annual refresh
+  workflow_dispatch:
+
+jobs:
+  ultimate-process:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Download all 69 sources
+        run: node scripts/ultimate-downloader.js
+        env:
+          GOOGLE_SHEETS_ID: ${{ secrets.GOOGLE_SHEETS_ID }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      
+      - name: Smart compression
+        run: node scripts/ultimate-compressor.js
+      
+      - name: Upload to Backblaze B2
+        run: node scripts/ultimate-uploader.js
+        env:
+          B2_KEY_ID: ${{ secrets.B2_KEY_ID }}
+          B2_APP_KEY: ${{ secrets.B2_APP_KEY }}
+          B2_BUCKET: ${{ secrets.B2_BUCKET }}
+      
+      - name: Run AI features
+        run: node scripts/ultimate-ai.js
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      
+      - name: Process payments
+        run: node scripts/ultimate-payments.js
+        env:
+          PAYPAL_CLIENT_ID: ${{ secrets.PAYPAL_CLIENT_ID }}
+          PAYPAL_SECRET: ${{ secrets.PAYPAL_SECRET }}
+          STRIPE_API_KEY: ${{ secrets.STRIPE_API_KEY }}
+      
+      - name: Sync with Google Sheets
+        run: node scripts/ultimate-sheets-sync.js
+        env:
+          GOOGLE_SHEETS_ID: ${{ secrets.GOOGLE_SHEETS_ID }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      
+      - name: Generate reports
+        run: node scripts/ultimate-sheets-sync.js --report
+      
+      - name: Check health
+        run: node scripts/ultimate-downloader.js --health
+      
+      - name: Resume failed downloads
+        if: always()
+        run: node scripts/ultimate-downloader.js --resume
