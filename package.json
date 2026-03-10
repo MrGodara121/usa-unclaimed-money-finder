@@ -1,0 +1,62 @@
+{
+  "name": "usa-unclaimed-money-finder",
+  "version": "1.0.0",
+  "description": "USA Unclaimed Money Finder - Ultimate Edition with 50 AI Features",
+  "main": "index.js",
+  "scripts": {
+    "start": "node scripts/ultimate-downloader.js",
+    "download": "node scripts/ultimate-downloader.js",
+    "compress": "node scripts/ultimate-compressor.js",
+    "upload": "node scripts/ultimate-uploader.js",
+    "ai": "node scripts/ultimate-ai.js",
+    "payments": "node scripts/ultimate-payments.js",
+    "sync": "node scripts/ultimate-sheets-sync.js",
+    "all": "npm run download && npm run compress && npm run upload && npm run sync"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "@backblaze/b2": "^1.5.0",
+    "googleapis": "^128.0.0",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "compression": "^1.7.4",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "tesseract.js": "^5.0.3",
+    "pdf-parse": "^1.1.1",
+    "stripe": "^14.0.0",
+    "@paypal/paypal-server-sdk": "^1.0.0",
+    "twilio": "^4.19.3",
+    "nodemailer": "^6.9.7",
+    "winston": "^3.11.0",
+    "node-cron": "^3.0.3",
+    "csv-parse": "^5.5.0",
+    "fast-csv": "^4.3.6",
+    "adm-zip": "^0.5.10",
+    "tar": "^6.2.0",
+    "archiver": "^6.0.1",
+    "zlib": "^1.0.5",
+    "crypto": "^1.0.1"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "nodemon": "^3.0.1",
+    "supertest": "^6.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "unclaimed-money",
+    "missing-money",
+    "ai-search",
+    "voice-search",
+    "ocr",
+    "usa",
+    "government-data"
+  ],
+  "author": "USA Unclaimed Money Finder",
+  "license": "MIT"
+}
